@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Test application - Keycloak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keycloak is an open source identity and access management solution">
+    <meta name="author" content="Keycloak Team">
+    <meta name="keywords" content="sso,idm,openid connect,saml,kerberos,ldap">
+
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/all.min.css" rel="stylesheet">
+    <link href="./index_files/keycloak.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://www.keycloak.org/resources/favicon.ico">
+
+    <script type="text/javascript" async="" src="./index_files/js"></script>
+
+    <script src="./index_files/bootstrap.min.js.download" type="text/javascript"></script>
+    <script src="./index_files/tocbot.min.js.download" type="text/javascript"></script>
+</head>
+<body>
+
+<header class="navbar navbar-expand-md bg-light shadow-sm">
+<nav class="container-xxl flex-wrap flex-md-no-wrap navbar-light">
+    <a class="navbar-brand me-5" href="https://www.keycloak.org/">
+        <img class="img-fluid" src="./index_files/keycloak_logo_200px.svg" width="240" alt="Keycloak">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars fa-lg px-1 py-2"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link " href="https://www.keycloak.org/guides">Guides</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link " href="https://www.keycloak.org/documentation">Docs</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link " href="https://www.keycloak.org/downloads">Downloads</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link " href="https://www.keycloak.org/community">Community</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link " href="https://www.keycloak.org/blog">Blog</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
+
+
+<script src="./index_files/keycloak.js.download" type="text/javascript"></script>
+<script src="./index_files/app.js.download" type="text/javascript"></script>
+
+<div class="jumbotron jumbotron-fluid bg-light kc-bg-triangles py-5 kc-app">
+    <div class="container">
+    <div class="row">
+        <div class="card">
+            <div id="card-config" class="card-body">
+                <div id="config-view" class="hide my-3">
+                    <a id="login" class="btn btn-primary hide">Sign in</a>
+                    <a id="logout" class="btn btn-primary hide">Sign out</a>
+                    <a href="#" class="btn btn-secondary show">Clear config</a>
+                </div>
+                <div id="config-edit" class="show">
+                    <form id="config-form">
+                      <div class="mb-3">
+                        <label for="url" class="form-label">Keycloak URL</label>
+                        <div>
+                          <input type="text" class="form-control" id="url" value="http://localhost:8080">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="realm" class="form-label">Realm</label>
+                        <div>
+                          <input type="text" class="form-control" id="realm" value="myrealm">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="client" class="form-label">Client</label>
+                        <div>
+                          <input type="text" class="form-control" id="client" value="myclient">
+                        </div>
+                      </div>
+                      <div>
+                          <button class="btn btn-primary">Save</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="display-user" class="row hide">
+        <div class="card mt-3">
+            <div class="card-body">
+                Hello, <span id="user-details"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 mt-3 mb-3">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text-muted me-3">Sponsored by</span>
+            <a href="http://www.redhat.com/" target="_blank" class="">
+                <img alt="Red Hat" src="./index_files/Logo-RedHat-A-Standard-RGB.svg" width="100">
+            </a>
+        </div>
+    </footer>
+</div>
+
+
+
+</body></html>
